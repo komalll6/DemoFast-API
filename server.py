@@ -20,7 +20,7 @@ def aboutUs():
 def student():
     return{
         "message": "Hey! I'm the student of MCA-3 SEM"
-    }
+    } 
 
 
 #fastapi - to run
