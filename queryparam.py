@@ -18,9 +18,9 @@ data=[    #in memory data
 },
 {
     "id":2,
-    "name":";dia",
+    "name":"dia",
     "age":15
-},
+}
 ]
 
 @app.get("/getalldata")
