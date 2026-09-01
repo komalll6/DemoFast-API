@@ -20,6 +20,11 @@ data=[    #in memory data
     "id":2,
     "name":"dia",
     "age":15
+},
+{
+    "id":2,
+    "name":"khushi",
+    "age":8
 }
 ]
 
@@ -34,14 +39,14 @@ def get_one(name: str):
                         return item
         return {"data": "not found"}
 
-@app.post("/adddata")
-def add_data(student: Student):
-        newData = {
-                "id": len(data) + 1,
-                **student.model_dump()
-        }
-        data.append(newData)
-        return newData
+# @app.post("/adddata")
+# def add_data(student: Student):
+#         newData = {
+#                 "id": len(data) + 1,
+#                 **student.model_dump()
+#         }
+#         data.append(newData)
+#         return newData
 
 # @app.get("/getalldata")
 # def get_all():
