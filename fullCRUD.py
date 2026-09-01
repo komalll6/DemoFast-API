@@ -38,6 +38,21 @@ students = [
 }
 ]
 
+#get all students => GET METHOD
+@app.get("/students")
+def get_students():
+    return students
+
+
+#get method => get student by id
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    for student in students:
+        if student["id"] == student_id:
+            return student
+    return {"message": "Student not found"}
+
+
 #delete student by id => DELETE METHOD
 @app.delete("/students/{student_id}")
 def delete_student(student_id: int):
@@ -46,6 +61,7 @@ def delete_student(student_id: int):
             students.pop(index) #pop = helps to remove the element from the list
             return {"message": "Student deleted successfully"}
     return {"message": "Student not found"}
+
 
 
 #put => to update the student details
